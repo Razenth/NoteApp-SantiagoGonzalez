@@ -22,6 +22,6 @@ namespace Core.Entities
         public TipoRequerimiento TipoRequerimientos { get; set; }
         public string TextoNotificacion { get; set; }
         public DateTime FechaCreacion { get; set; }
-        public DateTime FechaActualizacion { get; set; }
+        public DateTime FechaModificacion { get; set; }
     }
 }

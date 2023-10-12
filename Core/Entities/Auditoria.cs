@@ -11,7 +11,7 @@ namespace Core.Entities
         public string NombreUsuario { get; set; }
         public BigInteger DescAccion { get; set; }
         public DateTime FechaCreacion { get; set; }
-        public DateTime FechaActualizacion { get; set; }
+        public DateTime FechaModificacion { get; set; }
         public ICollection<BlockChain> BlockChains { get; set; }
     }
 }

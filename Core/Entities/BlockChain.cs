@@ -9,7 +9,7 @@ namespace Core.Entities
     {
         public string HashGenerado { get; set; }
         public DateTime FechaCreacion { get; set; }
-        public DateTime FechaActualizacion { get; set; }
+        public DateTime FechaModificacion { get; set; }
         public int IdNotificacion { get; set; }
         public TipoNotificacion TiposNotificaciones { get; set; }
         public int IdHiloRespuesta { get; set; }
