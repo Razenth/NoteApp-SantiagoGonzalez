@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
+using System.Threading.Tasks;
+
+namespace Core.Entities
+{
+    public class Auditoria : BaseEntity
+    {
+        public string NombreUsuario { get; set; }
+        public BigInteger DescAccion { get; set; }
+        public DateTime FechaCreacion { get; set; }
+        public DateTime FechaActualizacion { get; set; }
+        public ICollection<BlockChain> BlockChains { get; set; }
+    }
+}
