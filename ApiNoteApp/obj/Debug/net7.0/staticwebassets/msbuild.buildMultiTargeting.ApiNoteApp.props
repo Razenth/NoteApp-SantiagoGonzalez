@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ApiNoteApp.props" />
+</Project>
