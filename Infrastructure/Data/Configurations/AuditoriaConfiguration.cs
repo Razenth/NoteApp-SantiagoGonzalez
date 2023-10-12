@@ -28,7 +28,7 @@ namespace Infrastructure.Data.Configurations
             builder.Property(p => p.FechaCreacion)
             .HasColumnType("date");
 
-            builder.Property(p => p.FechaActualizacion)
+            builder.Property(p => p.FechaModificacion)
             .HasColumnType("date");
         }
     }
