@@ -9,5 +9,6 @@ namespace Core.Entities
     {
         public string Nombre { get; set; }
         public ICollection<GenericoVsSubmodulo> GenericosVsSubmodulos { get; set; }
+        public ICollection<RolVsMaestro> RolesVsMaestros { get; set; }
     }
 }

@@ -12,6 +12,8 @@ namespace Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<ModuloNotificacion> builder)
         {
+            builder.ToTable("ModuloNotificaciones");
+
             builder.HasKey(p => p.Id);
             builder.Property(p => p.Id);
 

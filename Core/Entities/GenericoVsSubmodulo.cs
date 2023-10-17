@@ -9,8 +9,8 @@ namespace Core.Entities
     {
         public int IdGenericos { get; set; }
         public PermisoGenerico PermisosGenericos { get; set; }
-        public int IdSubmodulo { get; set; }
-        public Submodulo Submodulos { get; set; }
+        public int IdSubmodulos { get; set; }
+        public MaestroVsSubmodulo MaestrosVsSubmodulos { get; set; }
         public int IdRol { get; set; }
         public Rol Roles { get; set; }
     }
