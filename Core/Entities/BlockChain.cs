@@ -8,8 +8,6 @@ namespace Core.Entities
     public class BlockChain : BaseEntity
     {
         public string HashGenerado { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public DateTime FechaModificacion { get; set; }
         public int IdNotificacion { get; set; }
         public TipoNotificacion TiposNotificaciones { get; set; }
         public int IdHiloRespuesta { get; set; }

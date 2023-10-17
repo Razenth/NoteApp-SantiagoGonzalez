@@ -10,8 +10,6 @@ namespace Core.Entities
     {
         public string NombreUsuario { get; set; }
         public int DescAccion { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public DateTime FechaModificacion { get; set; }
         public ICollection<BlockChain> BlockChains { get; set; }
     }
 }
