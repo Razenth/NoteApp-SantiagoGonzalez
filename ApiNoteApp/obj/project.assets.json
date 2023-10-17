@@ -2854,19 +2854,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\majom\\.nuget\\packages\\": {}
+    "C:\\Users\\APM02-039\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Santi Programa\\SantiagoDocuments\\NetCore\\NoteApp-SantiagoGonzalez\\ApiNoteApp\\ApiNoteApp.csproj",
+      "projectUniqueName": "C:\\Users\\APM02-039\\Documents\\SantiDocum\\.Net\\NoteApp-SantiagoGonzalez\\ApiNoteApp\\ApiNoteApp.csproj",
       "projectName": "ApiNoteApp",
-      "projectPath": "C:\\Santi Programa\\SantiagoDocuments\\NetCore\\NoteApp-SantiagoGonzalez\\ApiNoteApp\\ApiNoteApp.csproj",
-      "packagesPath": "C:\\Users\\majom\\.nuget\\packages\\",
-      "outputPath": "C:\\Santi Programa\\SantiagoDocuments\\NetCore\\NoteApp-SantiagoGonzalez\\ApiNoteApp\\obj\\",
+      "projectPath": "C:\\Users\\APM02-039\\Documents\\SantiDocum\\.Net\\NoteApp-SantiagoGonzalez\\ApiNoteApp\\ApiNoteApp.csproj",
+      "packagesPath": "C:\\Users\\APM02-039\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\APM02-039\\Documents\\SantiDocum\\.Net\\NoteApp-SantiagoGonzalez\\ApiNoteApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\majom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\APM02-039\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -2878,8 +2878,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Santi Programa\\SantiagoDocuments\\NetCore\\NoteApp-SantiagoGonzalez\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Santi Programa\\SantiagoDocuments\\NetCore\\NoteApp-SantiagoGonzalez\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\APM02-039\\Documents\\SantiDocum\\.Net\\NoteApp-SantiagoGonzalez\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\APM02-039\\Documents\\SantiDocum\\.Net\\NoteApp-SantiagoGonzalez\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -2956,7 +2956,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
