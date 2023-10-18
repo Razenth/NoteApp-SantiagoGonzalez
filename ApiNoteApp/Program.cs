@@ -1,3 +1,6 @@
+using System.Reflection;
+using ApiNoteApp.Extensions;
+using AspNetCoreRateLimit;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,9 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.ConfigureRateLimiting();
+builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
+builder.Services.ConfigureCors();
+builder.Services.AddApplicationServices();
 
 builder.Services.AddDbContext<NoteAppContext>(options =>
 {
@@ -32,3 +39,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+app.UseCors("CorsPolicy");
+
+app.UseIpRateLimiting(); 
