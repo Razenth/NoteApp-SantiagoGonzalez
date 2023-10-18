@@ -6,6 +6,7 @@ using ApiNoteApp.Dtos;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiNoteApp.Controllers;
@@ -84,6 +85,10 @@ public class AuditoriaController : BaseControllerApi
         if(auditoriaDto.Id != id)
         {
             return BadRequest();
+        }
+        if (auditoriaDto.FechaModificacion == DateTime.MinValue)
+        {
+            auditoriaDto.FechaModificacion = DateTime.Now;
         }
         var audiMapeado = _mapper.Map<Auditoria>(auditoriaDto);
         _unitOfWork.Auditorias.Update(audiMapeado);

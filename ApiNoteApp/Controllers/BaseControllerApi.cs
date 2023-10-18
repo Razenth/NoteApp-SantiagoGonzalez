@@ -4,12 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiNoteApp.Controllers
+namespace ApiNoteApp.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class BaseControllerApi : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class BaseControllerApi : ControllerBase
-    {
-        
-    }
+
 }

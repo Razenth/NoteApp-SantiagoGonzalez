@@ -12,12 +12,12 @@ namespace ApiNoteApp.Controllers;
 
 public class BlockChainController : BaseControllerApi
 {
-    private readonly IUnitOfWork _UnitOfWork;
+    private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
 
     public BlockChainController(IUnitOfWork unitOfWork, IMapper mapper)
     {
-        _UnitOfWork = unitOfWork;
+        _unitOfWork = unitOfWork;
         _mapper = mapper;
     }
 
@@ -27,7 +27,7 @@ public class BlockChainController : BaseControllerApi
 
     public async Task<ActionResult<IEnumerable<BlockChainDto>>> Get()
     {
-        var BlockChain = await _UnitOfWork.BlockChains.GetAllAsync();
+        var BlockChain = await _unitOfWork.BlockChains.GetAllAsync();
         return _mapper.Map<List<BlockChainDto>>(BlockChain);
     }
 
@@ -38,7 +38,7 @@ public class BlockChainController : BaseControllerApi
 
     public async Task<ActionResult<BlockChainDto>> GetId(int id)
     {
-        var BlockChain = await _UnitOfWork.BlockChains.GetByIdAsync(id);
+        var BlockChain = await _unitOfWork.BlockChains.GetByIdAsync(id);
         if (BlockChain == null)
         {
             return NotFound();
@@ -57,14 +57,14 @@ public class BlockChainController : BaseControllerApi
         {
             blockChain.FechaCreacion = DateTime.Now;
         }
-        _UnitOfWork.BlockChains.Add(blockChain);
-        await _UnitOfWork.SaveAsync();
+        _unitOfWork.BlockChains.Add(blockChain);
+        await _unitOfWork.SaveAsync();
         if (blockChain == null)
         {
             return BadRequest();
         }
         var dato = CreatedAtAction(nameof(Post), new { id = blockChainDto.Id }, blockChainDto);
-        var retorno = await _UnitOfWork.BlockChains.GetByIdAsync(blockChain.Id);
+        var retorno = await _unitOfWork.BlockChains.GetByIdAsync(blockChain.Id);
         return _mapper.Map<BlockChainDto>(retorno);
     }
 
@@ -73,7 +73,7 @@ public class BlockChainController : BaseControllerApi
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-    public async Task<ActionResult<BlockChainDto>> Put(int id, BlockChainDto blockChainDto)
+    public async Task<ActionResult<BlockChainDto>> Put(int id, [FromBody] BlockChainDto blockChainDto)
     {
         if (blockChainDto == null)
         {
@@ -93,8 +93,8 @@ public class BlockChainController : BaseControllerApi
             blockChainDto.FechaModificacion = DateTime.Now;
         }
         var blockChains = _mapper.Map<BlockChain>(blockChainDto);
-        _UnitOfWork.BlockChains.Update(blockChains);
-        await _UnitOfWork.SaveAsync();
+        _unitOfWork.BlockChains.Update(blockChains);
+        await _unitOfWork.SaveAsync();
         return _mapper.Map<BlockChainDto>(blockChainDto);
     }
 
@@ -104,13 +104,13 @@ public class BlockChainController : BaseControllerApi
 
     public async Task<ActionResult> Delete(int id)
     {
-        var blockChain = await _UnitOfWork.BlockChains.GetByIdAsync(id);
+        var blockChain = await _unitOfWork.BlockChains.GetByIdAsync(id);
         if (blockChain == null)
         {
             return NotFound();
         }
-        _UnitOfWork.BlockChains.Remove(blockChain);
-        await _UnitOfWork.SaveAsync();
+        _unitOfWork.BlockChains.Remove(blockChain);
+        await _unitOfWork.SaveAsync();
         return NoContent();
     }
 }
