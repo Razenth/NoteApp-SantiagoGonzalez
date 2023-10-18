@@ -85,8 +85,6 @@ public class AuditoriaController : BaseControllerApi
         {
             return BadRequest();
         }
-        auditoriaDto.FechaCreacion = auditoriaDto.FechaCreacion;
-        auditoriaDto.FechaModificacion = DateTime.Now;
         var audiMapeado = _mapper.Map<Auditoria>(auditoriaDto);
         _unitOfWork.Auditorias.Update(audiMapeado);
         await _unitOfWork.SaveAsync();
